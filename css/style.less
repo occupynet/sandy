@@ -433,25 +433,26 @@ button,
 	.caps;
 	font-weight: bold; 
 	font-size: 13px; 
-	color: @white; 
+	color: @white!important; 
 	&:hover {
-		background: @grayA;
+		background: @grayB;
+		color: @white!important; 
 	}
 }
 
 .aCalendar {
 	font-weight: bold; 
-	color: #222;
+	color: @grayA;
     position: relative;
     padding-left: 25px;
 	&:before {
     	font-family: "entypo";
 		content: "📅";
 		font-size: 36px;
-		color: @black;
+		color: @grayA;
 	    position: absolute;
-	    left: 5px;
-	    top: 25px;
+	    left: 0;
+	    top: 0;
 	    text-indent: 0;
 	}
 }
@@ -488,13 +489,15 @@ button,
 	border: 1px solid #DDD;
 	th {
 		.caps;		
-		padding: 5px;
+		padding: 5px 10px 7px;
 		font-size: 12px;
 		border-color: #BBB;
+		white-space: nowrap;
 	}
 	td {
-		padding: 5px;
-		font-size: 13px;
+		padding: 5px 10px 7px;
+		font-size: 14px;
+		line-height: 1.3em;
 	}
 	tr:nth-child(2n+2) {  
 	  background: #F5F5F5;
@@ -505,8 +508,12 @@ button,
 			color: @grayA;
 		}
 	}
+	.pro-status {
+		white-space: nowrap;
+	}
 	.pro-link {
 		.pictogram;
+		font-size: 40px;
 		text-align: center;
 	}
 }
@@ -1482,11 +1489,16 @@ footer.entry-meta {
 	height: 150px; 
 	width: 150px;
 }
-
-.highlight-text {}
  
 
-
+.project-content {
+	background: @grayF;
+	padding: 0 15px 15px;
+	h2 {
+		border-top: 1px solid #BBB;
+		margin: 0;
+	}
+}
 
 
 
