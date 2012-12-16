@@ -364,8 +364,10 @@ a, a:active, a:visited {
 
 a img {border: 0;}
 
-button, .button, 
-.button:active, .button:visited {
+button, 
+.button, 
+.button:active, 
+.button:visited {
 	.inlineBlock;
 	.clear-shadow();
 	.border-radius(4px);
@@ -375,7 +377,7 @@ button, .button,
 	text-align: center;
 	font-weight: bold;
 	background: @grayA;
-	color: @grayF;
+	color: @white;
 	border: 0;
 	text-decoration: none;
 	text-shadow: none; 
@@ -387,6 +389,14 @@ button, .button,
 		color: @white; 
 	}
 }
+
+#content button,
+#content .button,
+#content .button:active,
+#content .button:visited {
+	padding: 7px 15px 8px;
+}
+
 
 .btnAlert, 
 .btnAlert:active, .btnAlert:visited {
@@ -470,6 +480,36 @@ button, .button,
 }
 
 
+/* table */
+
+.pro {
+	margin: 25px 0;
+	background: @white;
+	border: 1px solid #DDD;
+	th {
+		.caps;		
+		padding: 5px;
+		font-size: 12px;
+		border-color: #BBB;
+	}
+	td {
+		padding: 5px;
+		font-size: 13px;
+	}
+	tr:nth-child(2n+2) {  
+	  background: #F5F5F5;
+	}
+	.pro-name {
+		font-weight: bold;
+		a {
+			color: @grayA;
+		}
+	}
+	.pro-link {
+		.pictogram;
+		text-align: center;
+	}
+}
 
 
 /******* LISTS *******/
@@ -540,6 +580,15 @@ ol.counter {
 		color: #BBB;	    
 	}
 }
+
+.spacer {
+	margin: 25px 50px 50px;
+	li {
+		margin-bottom: 1em;
+	}
+}
+
+
 
 /* forms */
 
@@ -1428,7 +1477,8 @@ footer.entry-meta {
 	color: white; 
 	margin: 5px 0 10px;
 }
-.highlight-pic {
+.highlight-pic, 
+.highlight-pic img {
 	height: 150px; 
 	width: 150px;
 }
