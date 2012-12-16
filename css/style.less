@@ -491,19 +491,21 @@ button,
 		.caps;		
 		padding: 5px 10px 7px;
 		font-size: 12px;
-		border-color: #BBB;
+		border-bottom: 1px solid #BBB;
 		white-space: nowrap;
 	}
 	td {
 		padding: 5px 10px 7px;
 		font-size: 14px;
 		line-height: 1.3em;
+		vertical-align: top;
 	}
 	tr:nth-child(2n+2) {  
 	  background: #F5F5F5;
 	}
 	.pro-name {
 		font-weight: bold;
+		min-width: 160px;
 		a {
 			color: @grayA;
 		}
@@ -515,6 +517,8 @@ button,
 		.pictogram;
 		font-size: 40px;
 		text-align: center;
+		line-height: 14px;
+		padding-top: 7px;
 	}
 }
 
@@ -1504,7 +1508,13 @@ footer.entry-meta {
 		margin-top: 15px;
 		margin-right: 15px;
 	}
+	span {
+		.caps;
+		font-size: 13px;
+		margin-right: 5px;
+	}
 }
+
 .twitter-follow-button {
 	float: left;
 	margin-right: 15px;
