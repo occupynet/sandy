@@ -1054,7 +1054,7 @@ footer.entry-meta {
 	display: none;
 }
 
-/* home page twitter feed */
+/* twitter feed */
 
 
 .twtr-widget, .twtr-doc {
@@ -1188,15 +1188,16 @@ footer.entry-meta {
 
 /* home page all news feed */
 
-.social-media-mashup {
-	margin: 0;
-	.icons-grey .smm-item {
+.ui-tabs-panel .social-media-mashup.icons-grey {
+	margin: 0!important;
+	margin-top: -1em!important;
+	.smm-item {
+		background-position: 5px 12px!important;
 		border-bottom: 1px solid #CCC;
 		max-height: 160px;
 		overflow: hidden;
 		overflow-y: scroll;
 		padding: 10px 50px 0 !important;
-		background-position: 13px 12px !important;
 		p {
 			font-size: 14px;
 		}
@@ -1213,6 +1214,7 @@ footer.entry-meta {
 		}
 	}
 }
+
 
 
 
@@ -1281,6 +1283,80 @@ footer.entry-meta {
 /******* UNIQUE PAGES *******/
 
 
+
+/* home */
+
+.feature {
+	margin: 25px 0;
+	padding: 5px 0 15px; 
+	border-top: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+}
+.feature-title {
+	font-size: 15px; 
+	font-weight: bold; 
+	margin: 0; 
+	line-height: 35px; 
+	float: left;
+}
+.feature-next, 
+.feature-back {
+	.pictogram;
+	float:right; 
+	margin: 0 0 5px 5px; 
+	padding: 0; 
+	height: 25px; 
+	width: 25px; 
+	line-height: 25px; 
+	font-size: 36px; 
+	text-align: center; 
+	color: #FFF;
+	&.disabled {
+		background: #EEE;
+	}
+}
+.feature-headline {
+	clear: both; 
+	margin: 0; 
+	padding: 10px 60px 10px 0;
+	font-size: 20px; 
+}
+
+
+.home-feeds {
+	width: 50%; 
+	float: right; 
+	padding-left: 15px;
+}
+
+.home-promos {
+	width: 50%;
+}
+
+.promo {
+	height: 150px; 
+	width: 100%; 
+	background-color: #CCC; 
+	margin-bottom: 15px;
+	a {
+		display: block; 
+		height: 100%;
+		border: 1px solid @white;
+	}
+	h2 {
+		.condensed;
+		font-size: 24px;
+		color: @white;
+		padding: 15px;
+		margin: 0;
+	}
+	a:hover {
+		border-color: @yellow;
+		h2 {
+			color: @yellow;
+		}
+	}
+}
 
 
 
