@@ -82,6 +82,7 @@ body #page {
 /* colors */
 
 @yellow: #FFCD67;
+@highlight: #FFF5E1;
 @red: #DA521F;
 @orange: (@yellow + @red);
 @blue: #0085BF;
@@ -415,6 +416,35 @@ button, .button,
 	margin-left: 15px;
 }
 
+.btnEvent {
+	background: @red; 
+	padding: 4px 10px 5px; 
+	.border-radius(3px); 
+	.caps;
+	font-weight: bold; 
+	font-size: 13px; 
+	color: @white; 
+	&:hover {
+		background: @grayA;
+	}
+}
+
+.aCalendar {
+	font-weight: bold; 
+	color: #222;
+    position: relative;
+    padding-left: 25px;
+	&:before {
+    	font-family: "entypo";
+		content: "📅";
+		font-size: 36px;
+		color: @black;
+	    position: absolute;
+	    left: 5px;
+	    top: 25px;
+	    text-indent: 0;
+	}
+}
 
 
 #respond {
@@ -1070,30 +1100,29 @@ footer.entry-meta {
 .twtr-widget .twtr-tweet {
 	border-bottom: 1px solid #CCC;
 	padding: 0!important;
+	a {
+		color: #999 !important;
+		&:hover {
+			color: @blue!important;
+		}
+	}
 }
+
 .twtr-user {
 	display: none!important;
 }
-.tweet-url, .username {
-	color: #999!important;
-	&:hover {
-		color: @blue!important;
-		text-decoration: none!important;
-	}
-}
+
 
 .twtr-widget .twtr-tweet-text p {
 	line-height: 1.5em!important;
 }
 
-.twtr-widget em, .twtr-widget .twtr-new-results {
+.twtr-widget .twtr-tweet em, 
+.twtr-widget .twtr-new-results {
 	font-size: 12px!important;
 	font-style: italic!important;
 	a {
-		color: #999!important;
-		&:hover {
-			color: @blue!important;
-		}
+		color: @blue!important;
 	}
 }
 .twtr-timestamp {
@@ -1288,7 +1317,7 @@ footer.entry-meta {
 
 .feature {
 	margin: 30px 0;
-	padding: 5px 0 15px; 
+	padding: 5px 0; 
 	border-top: 1px solid #BBB;
 	border-bottom: 1px solid #BBB;
 }
@@ -1318,7 +1347,7 @@ footer.entry-meta {
 .feature-headline {
 	clear: both; 
 	margin: 0; 
-	padding: 10px 60px 10px 0;
+	padding: 5px 60px 18px 0;
 	font-size: 20px; 
 }
 
@@ -1360,6 +1389,54 @@ footer.entry-meta {
 		}
 	}
 }
+
+
+/* projects */
+
+
+.highlight {
+	height: 200px; 
+	margin: 25px 0; 
+	padding: 15px 15px 15px 20px; 
+	background: @highlight;
+}
+
+.highlight-event {
+	float: right; 
+	width: 320px; 
+	height: 170px; 
+	margin-left: 25px; 
+	padding: 10px; 
+	background: #333;
+}
+
+.highlight-info {
+	width: 150px; 
+	padding-left: 10px; 
+	float: right;
+}
+
+.highlight-title {
+	color: @white; 
+	margin: 0; 
+	.caps; 
+	font-weight: bold; 
+	line-height: 1.3em;
+}
+
+.highlight-details {
+	color: white; 
+	margin: 5px 0 10px;
+}
+.highlight-pic {
+	height: 150px; 
+	width: 150px;
+}
+
+.highlight-text {}
+ 
+
+
 
 
 
