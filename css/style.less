@@ -374,6 +374,7 @@ button,
 	.sans;
 	.caps;
 	padding: 10px 15px;
+	font-size: 14px;
 	text-align: center;
 	font-weight: bold;
 	background: @grayA;
@@ -382,7 +383,7 @@ button,
 	text-decoration: none;
 	text-shadow: none; 
 	cursor: pointer;
-	-webkit-transition-property: background-color, color;
+	-webkit-transition-property: background-color;
 	-webkit-transition-duration: 100ms;	
 	&:hover {
 		background: @grayB;
@@ -395,6 +396,7 @@ button,
 #content .button:active,
 #content .button:visited {
 	padding: 7px 15px 8px;
+	
 }
 
 
@@ -434,6 +436,8 @@ button,
 	font-weight: bold; 
 	font-size: 13px; 
 	color: @white!important; 
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 100ms;	
 	&:hover {
 		background: @grayB;
 		color: @white!important; 
@@ -593,7 +597,7 @@ ol.counter {
 }
 
 .spacer {
-	margin: 25px 50px 50px;
+	margin: 25px 50px!important;
 	li {
 		margin-bottom: 1em;
 	}
@@ -1393,7 +1397,7 @@ footer.entry-meta {
 	.pictogram;
 	float:right; 
 	margin: 0 0 5px 5px; 
-	padding: 0; 
+	padding: 0!important; 
 	height: 25px; 
 	width: 25px; 
 	line-height: 25px; 
