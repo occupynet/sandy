@@ -378,7 +378,7 @@ button,
 	text-align: center;
 	font-weight: bold;
 	background: @grayA;
-	color: @white;
+	color: @white!important;
 	border: 0;
 	text-decoration: none;
 	text-shadow: none; 
@@ -387,7 +387,7 @@ button,
 	-webkit-transition-duration: 100ms;	
 	&:hover {
 		background: @grayB;
-		color: @white; 
+		color: @white!important; 
 	}
 }
 
@@ -605,6 +605,53 @@ ol.counter {
 	li {
 		margin-bottom: 1em;
 	}
+}
+
+
+/* calendar -- temporary until new plugin theme is done */
+
+.ai1ec-date {
+	background: transparent!important;
+	border-top: 1px solid #BBB!important;
+}
+.ai1ec-event {
+	border: 0!important;
+}
+.ai1ec-agenda-view li.ai1ec-date {
+	padding-bottom: 15px!important;
+}
+.ai1ec-event-title {
+	font-size: 15px!important;
+	line-height: 1.5em;
+}
+
+#ai1ec-prev-page, #ai1ec-next-page {
+	white-space: nowrap;
+	font-size: 11px!important;
+	padding: 5px;
+	line-height: 8px;
+}
+
+.ai1ec-event-overlay {
+	background: white!important;
+	box-shadow: none!important;
+	border-radius: 0!important;
+	border-bottom: 1px solid #DDD;
+}
+.ai1ec-event-expand {
+	font-size: 16px!important;
+	font-weight: bold!important;
+	color: white;
+	background: @blue;
+	padding: 2px 5px!important;
+	text-shadow: none;
+	border-radius: 3px;
+	&:hover {
+		background: @grayA;
+	}
+}
+.ai1ec-agenda-view .ai1ec-event .ai1ec-event-click {
+	color: @blue!important;
 }
 
 
