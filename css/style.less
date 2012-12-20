@@ -638,6 +638,7 @@ ol.counter {
 		font-size: 12px;
 		background: @blue;
 		color: @white;
+		white-space: nowrap;
 	}
 	a:hover {
 		background: @grayB;
@@ -681,6 +682,19 @@ ul.library {
 		max-width: 40em;
 	}
 }
+
+
+ul.resources {
+	list-style: none;
+	margin: 1em 50px 3em!important;
+	li {
+		margin-bottom: 1em;
+		li {
+			margin-bottom: .5em;
+		}
+	}
+}
+
 
 
 
@@ -1789,6 +1803,7 @@ footer.entry-meta {
 		font-size: 12px;
 		background: @blue;
 		color: @white;
+		white-space: nowrap;
 	}
 	a:hover {
 		background: @grayB;
