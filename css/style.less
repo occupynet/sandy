@@ -579,7 +579,6 @@ dd {
 }
 
 
-
 ol {
 	margin: 2em 50px;
 	li {
@@ -622,59 +621,44 @@ ol.counter {
 	}
 }
 
+/* library page */
 
-/* calendar -- temporary until new plugin theme is done */
-
-.ai1ec-date {
-	background: transparent!important;
-	border-top: 1px solid #BBB!important;
-}
-.ai1ec-event {
-	border: 0!important;
-}
-.ai1ec-event.ai1ec-expanded {
-	border: 1px solid #999!important;
-}
-
-.ai1ec-agenda-view li.ai1ec-date {
-	padding-bottom: 15px!important;
-}
-.ai1ec-agenda-view .ai1ec-event-title {
-	font-size: 15px!important;
-	line-height: 1.5em;
-}
-
-#ai1ec-prev-page, #ai1ec-next-page {
-	white-space: nowrap;
-	font-size: 11px!important;
-	padding: 5px;
-	line-height: 8px;
-}
-
-.ai1ec-event-overlay {
-	background: white!important;
-	box-shadow: none!important;
-}
-.ai1ec-event-expand {
-	font-size: 16px!important;
-	font-weight: bold!important;
-	color: white;
-	background: @blue;
-	padding: 2px 5px!important;
-	text-shadow: none;
-	border-radius: 3px;
-	&:hover {
-		background: @grayA;
+.category-title {
+	padding: 25px 50px 0;
+	border-top: 1px solid #BBB;
+    position: relative;
+    margin:0!important;
+	&:before {
+    	font-family: "entypo";
+		content: "★";
+	    position: absolute;
+		left: 10px;
+		top: 25px;
+		font-size: 48px;
+	    text-indent: 0;
+	} 
+}	
+	
+ul.library {
+	list-style: none;
+	margin: 0 50px 4em!important;
+	.item-title {
+		font-size: 24px;
+		margin: 1.5em 0 0!important;
+		line-height: 1.3em;
+		max-width: 24em;
+	}
+	cite {
+		display: block;
+		text-align: left;
+		font-size: 13px;
+	}
+	.item-summary {
+		margin: 0;
+		max-width: 40em;
 	}
 }
-.ai1ec-agenda-view .ai1ec-event .ai1ec-event-click {
-	color: @blue!important;
-}
 
-.thenly blockquote {
-	border: 0;
-	font-size: 15px;
-}
 
 
 /* forms */
@@ -1629,6 +1613,61 @@ footer.entry-meta {
 	background:transparent;
 	border:none;
 	padding:0;
+}
+
+
+
+/* calendar -- temporary until new plugin theme is done */
+
+.ai1ec-date {
+	background: transparent!important;
+	border-top: 1px solid #BBB!important;
+}
+.ai1ec-event {
+	border: 0!important;
+}
+.ai1ec-event.ai1ec-expanded {
+	border: 1px solid #999!important;
+}
+
+.ai1ec-agenda-view li.ai1ec-date {
+	padding-bottom: 15px!important;
+}
+.ai1ec-agenda-view .ai1ec-event-title {
+	font-size: 15px!important;
+	line-height: 1.5em;
+}
+
+#ai1ec-prev-page, #ai1ec-next-page {
+	white-space: nowrap;
+	font-size: 11px!important;
+	padding: 5px;
+	line-height: 8px;
+}
+
+.ai1ec-event-overlay {
+	background: white!important;
+	box-shadow: none!important;
+}
+.ai1ec-event-expand {
+	font-size: 16px!important;
+	font-weight: bold!important;
+	color: white;
+	background: @blue;
+	padding: 2px 5px!important;
+	text-shadow: none;
+	border-radius: 3px;
+	&:hover {
+		background: @grayA;
+	}
+}
+.ai1ec-agenda-view .ai1ec-event .ai1ec-event-click {
+	color: @blue!important;
+}
+
+.thenly blockquote {
+	border: 0;
+	font-size: 15px;
 }
 
 
