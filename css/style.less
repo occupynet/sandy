@@ -81,17 +81,17 @@ body #page {
 
 /* colors */
 
-@yellow: #FFCD67;
-@highlight: #FFF5E1;
-@red: #DA521F;
-@orange: (@yellow + @red);
-@blue: #0085BF;
+@brand: #FFCD67;
+@brandlight: #FFF5E1;
+@flag: #DA521F;
+@anchor: #0085BF;
+@body: #222222;
+
 @green: #22B573;
 @teal: #00A99D;
 @navy: #36637D;
 @purple: #7600FF;
 @black: #000000;
-@grayA: #222222;
 @grayB: #555555;
 @grayC: #AAAAAA;
 @grayD: #BBBBBB;
@@ -228,7 +228,7 @@ body #page {
 
 body, input, textarea {
 	.sans;
-	color: @grayA;
+	color: @body;
 	font-size: 14px;
 	line-height: 1.5em;
 	font-weight: 400; 
@@ -241,7 +241,7 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, caption, pre, table, address, block
 	margin:0; 
 	padding:0; 
 	text-align: left; 
-	color: @grayA;
+	color: @body;
 }
 	
 h1, h2, h3, h4, h5, h6, dl, ol, ul, pre, table, address, blockquote {
@@ -262,7 +262,7 @@ p, label, li  {font-size: 15px;}
 
 .small, small {font-size: 12px;}
 .caps {text-transform: uppercase; letter-spacing: 1px; line-height: 1.2em;}
-.alertText, .alertText a {color: @red;}
+.alertText, .alertText a {color: @flag;}
 
 blockquote {
 	font-size: 18px; 
@@ -278,7 +278,7 @@ blockquote {
     	font-family: "entypo";
 		content: "★";
 		font-size: 60px;
-		color: @yellow;
+		color: @brand;
 	}
 	&:before {
 	    position: absolute;
@@ -354,11 +354,11 @@ pre {
 /* links */
 
 a, a:active, a:visited {
-	color: @blue; 
+	color: @anchor; 
 	text-decoration: none; 
 	cursor: pointer;
 	&:hover, &:focus {
-		color: @grayA; 
+		color: @body; 
 	}
 }
 
@@ -377,7 +377,7 @@ button,
 	font-size: 14px;
 	text-align: center;
 	font-weight: bold;
-	background: @grayA;
+	background: @body;
 	color: @white!important;
 	border: 0;
 	text-decoration: none;
@@ -402,13 +402,13 @@ button,
 
 .btnAlert, 
 .btnAlert:active, .btnAlert:visited {
-	background: @red;
+	background: @flag;
 	color: @white;
 }
 
 .btnSmall,
 .btnSmall:active, .btnSmall:visited {
-	background: @blue;
+	background: @anchor;
 	color: @white;
 	width: auto!important;
 	padding: 8px 12px;
@@ -423,14 +423,14 @@ button,
 	float: right;
 	.caps;
 	font-weight: bold;
-	border-bottom: 2px solid @blue;
+	border-bottom: 2px solid @anchor;
 	display: block;
 	margin-left: 15px;
 	margin-top: -25px;
 }
 
 .btnEvent {
-	background: @red; 
+	background: @flag; 
 	padding: 4px 10px 5px; 
 	.border-radius(3px); 
 	.caps;
@@ -447,7 +447,7 @@ button,
 
 .aCalendar {
 	font-weight: bold; 
-	color: @grayA;
+	color: @body;
     position: relative;
     padding-left: 25px;
     font-size: 13px;
@@ -455,7 +455,7 @@ button,
     	font-family: "entypo";
 		content: "📅";
 		font-size: 36px;
-		color: @grayA;
+		color: @body;
 	    position: absolute;
 	    left: 0;
 	    top: -2px;
@@ -516,7 +516,7 @@ button,
 		font-weight: bold;
 		width: 20%;
 		a {
-			color: @grayA;
+			color: @body;
 		}
 	}
 	.pro-status {
@@ -636,7 +636,7 @@ ol.counter {
 		margin: 0 1px 1px 0;
 		.caps;
 		font-size: 12px;
-		background: @blue;
+		background: @anchor;
 		color: @white;
 		white-space: nowrap;
 	}
@@ -714,7 +714,7 @@ ul.resources {
 	line-height: 1.5em;
 }
 .gfield_required {
-	color: @red;
+	color: @flag;
 }
 input[type="checkbox"], 
 input[type="radio"] {
@@ -905,7 +905,7 @@ hr {
 			 color: @white;
 		 }
 		span {
-			color: @yellow;
+			color: @brand;
 		}
 	}
 }
@@ -978,7 +978,7 @@ hr {
 	a:hover, 
 	.current-menu-item a, 
 	.current-page-ancestor a:hover {
-		background: @yellow;
+		background: @brand;
 	}
 	.current-page-ancestor a {
 		background: @grayD;		
@@ -1011,7 +1011,7 @@ hr {
 			white-space: nowrap;
 		}
 		li:hover a {
-			background: @yellow;
+			background: @brand;
 		}
 	}
 }
@@ -1047,7 +1047,7 @@ hr {
 .page-title {
 	font-size: 48px;
 	margin: 0;
-	color: @yellow;
+	color: @brand;
 }
 
 .home .page-title, .home .entry-title {
@@ -1061,7 +1061,7 @@ hr {
 
 .entry-title {
 	margin-top: 3px;
-	color: @grayA;
+	color: @body;
 }
 
 
@@ -1281,7 +1281,7 @@ footer.entry-meta {
 	a {
 		color: #999 !important;
 		&:hover {
-			color: @blue!important;
+			color: @anchor!important;
 		}
 	}
 }
@@ -1300,7 +1300,7 @@ footer.entry-meta {
 	font-size: 12px!important;
 	font-style: italic!important;
 	a {
-		color: @blue!important;
+		color: @anchor!important;
 	}
 }
 .twtr-timestamp {
@@ -1321,7 +1321,7 @@ footer.entry-meta {
 	font-size: 11px;
 	padding: 8px 10px 10px;
 	display: block;
-	color: @blue;
+	color: @anchor;
 }
 
 /* subpage twitter widget */
@@ -1416,7 +1416,7 @@ footer.entry-meta {
 				color: #999;			
 			}
 			a:hover {
-				color: @blue;
+				color: @anchor;
 			}
 		}
 	}
@@ -1562,9 +1562,9 @@ footer.entry-meta {
 		display: block;
 	}
 	a:hover {
-		border-color: @yellow;
+		border-color: @brand;
 		span {
-			color: @yellow;
+			color: @brand;
 		}
 	}
 }
@@ -1577,7 +1577,7 @@ footer.entry-meta {
 	min-height: 190px; 
 	margin: 25px 0; 
 	padding: 10px; 
-	background: @highlight;
+	background: @brandlight;
 }
 
 .highlight-event {
@@ -1710,16 +1710,16 @@ footer.entry-meta {
 	font-size: 16px!important;
 	font-weight: bold!important;
 	color: white;
-	background: @blue;
+	background: @anchor;
 	padding: 2px 5px!important;
 	text-shadow: none;
 	border-radius: 3px;
 	&:hover {
-		background: @grayA;
+		background: @body;
 	}
 }
 .ai1ec-agenda-view .ai1ec-event .ai1ec-event-click {
-	color: @blue!important;
+	color: @body!important;
 }
 .ai1ec-agenda-view .ai1ec-event.ai1ec-allday .ai1ec-event-click {
 	background: transparent!important
@@ -1776,7 +1776,7 @@ footer.entry-meta {
 }
 .keyHub {
 	.key;
-	color: @red;
+	color: @flag;
 }
 .keyDropoff {
 	.key;
@@ -1784,7 +1784,7 @@ footer.entry-meta {
 }
 .keyVolunteer {
 	.key;
-	color: @blue;
+	color: @anchor;
 }
 .keyBoth {
 	.key;
@@ -1835,7 +1835,7 @@ footer.entry-meta {
 		padding: 4px 11px;
 		.caps;
 		font-size: 12px;
-		background: @blue;
+		background: @anchor;
 		color: @white;
 		white-space: nowrap;
 	}
@@ -1844,7 +1844,7 @@ footer.entry-meta {
 		color: @white;
 	}
 	.filter-class.selected {
-		background-color: @grayA; 
+		background-color: @body; 
 		color: @white;
 	}
 }
@@ -1884,7 +1884,7 @@ footer.entry-meta {
 		.sans;
 		.caps;
 		font-size: 12px;
-		color: @grayA;
+		color: @body;
 	}
 	.stateface {
 		float: right;
@@ -1927,11 +1927,11 @@ footer.entry-meta {
 	font-size: 14px;
 }
 .cardStatus {
-	color: @red;
+	color: @flag;
 	font-size: 15px;
 }
 .cardDetails {
-	color: @grayA;
+	color: @body;
 	font-size: 14px;
 }
 .cardTimes, .cardContact, .cardLink {
@@ -1945,7 +1945,7 @@ footer.entry-meta {
 	color: @black;
 	text-decoration: underline;
 	&:hover {
-		color: @blue;
+		color: @anchor;
 	}
 }
 
@@ -1967,7 +1967,7 @@ footer.entry-meta {
 		.border-radius(15px);
 		border: 1px solid #CCC;
 		&:hover {
-			color: @blue;
+			color: @anchor;
 		}
 	}
 }
@@ -1976,10 +1976,10 @@ footer.entry-meta {
 /* card types */
 
 .hub .cardType {
-	background: @red!important;
+	background: @flag!important;
 }
 .volunteer .cardType {
-	background: @blue;
+	background: @anchor;
 }
 .dropoff .cardType {
 	background: @green;
@@ -1991,10 +1991,10 @@ footer.entry-meta {
 	background: @grayC;
 }
 .food .cardType {
-	background: @grayA;
+	background: @body;
 }
 .tile-always-display .cardType {
- background: @yellow;
+ background: @brand;
 }
 
 
@@ -2017,7 +2017,7 @@ footer.entry-meta {
 		padding: 0;
 		width: auto;
 		background: white!important;
-		color: @red;
+		color: @flag;
 		font-size: 16px;
 	}
 	.cardAddress {
@@ -2051,7 +2051,7 @@ footer.entry-meta {
 	border: 1px solid #DDD;
 	padding: 0;
 	&:hover {
-		border-color: @red;
+		border-color: @flag;
 	}
 	.aCard {
 		display: block;
@@ -2062,7 +2062,7 @@ footer.entry-meta {
 		text-decoration: none;
 		font-size: 40px;
 		line-height: 25px;
-		color: @red;
+		color: @flag;
 	}
 	.cardStatus {
 		height: 90px;
@@ -2152,8 +2152,8 @@ footer.entry-meta {
 .ui-widget {.sans; font-size: 14px; }
 .ui-widget .ui-widget { font-size: 14px; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {.sans; font-size: 14px; }
-.ui-widget-content { border: 0!important; background: #F9F9F9!important; color: @grayA; }
-.ui-widget-content a { color: @grayA; }
+.ui-widget-content { border: 0!important; background: #F9F9F9!important; color: @body; }
+.ui-widget-content a { color: @body; }
 .ui-widget-header { border: 0; background: #999!important; color: #FFF; font-weight: bold; }
 .ui-widget-header a { color: #FFF; }
 
@@ -2161,19 +2161,19 @@ footer.entry-meta {
 ----------------------------------*/
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 0; background: transparent!important; font-weight: normal; color: @white; }
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: @white; text-decoration: none; background: transparent!important;}
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 0; background: @yellow; font-weight: normal; color: @white; }
-.ui-state-hover a, .ui-state-hover a:hover { color: @white; text-decoration: none; background: @yellow;}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 0; background: @brand; font-weight: normal; color: @white; }
+.ui-state-hover a, .ui-state-hover a:hover { color: @white; text-decoration: none; background: @brand;}
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 0; background: #FFF; font-weight: normal; color: @white; }
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: @white; text-decoration: none; }
 .ui-widget :active { outline: none; }
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 0; background: @yellow; color: @white; }
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 0; background: @brand; color: @white; }
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { color: @white; }
-.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 0; background: #FFF; color: @red; }
-.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: @red; }
-.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: @red; }
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 0; background: #FFF; color: @flag; }
+.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: @flag; }
+.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: @flag; }
 .ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
 .ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
 .ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
@@ -2184,7 +2184,7 @@ footer.entry-meta {
 .ui-tabs .ui-tabs-nav li { list-style: none; float: left; background-color: #999; position: relative; top: 0; margin: 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; line-height: 36px; font-size: 24px; .condensed;  border-right: 1px;}
 .ui-tabs .ui-tabs-nav li a { float: left; padding: 0 25px!important; line-height: 36px; text-decoration: none; color: #FFF; }
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 0; }
-.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; background: @yellow; color: @white;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; background: @brand; color: @white;}
 .ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 0!important; background: #F9F9F9; }
 .ui-tabs .ui-tabs-hide { display: none !important; }
 
@@ -2235,7 +2235,7 @@ footer.entry-meta {
 .sws-tabs.ui-tabs .ui-tabs-nav li a:hover {
 	color: white!important;
 	border-radius: 0;
-	background: @yellow!important;
+	background: @brand!important;
 }
 
 .ui-tabs .ui-tabs-nav li {
