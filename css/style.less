@@ -1094,7 +1094,8 @@ footer.entry-meta {
 
 
 .blog, 
-.single {
+.single,
+.archive {
 	#primary {
 		padding-top: 30px;		
 	}
@@ -1122,6 +1123,17 @@ footer.entry-meta {
 		margin: 0 20px 10px 0;
 	}
 }
+
+
+.archive {
+	.page-title {
+		display: none;
+	}
+	.entry-meta {
+		display: none;
+	}
+}
+
 
 #content .social-commentlist {
 	margin: 0 5px!important;
@@ -1690,7 +1702,6 @@ footer.entry-meta {
 	padding: 5px;
 	line-height: 8px;
 }
-
 .ai1ec-event-overlay {
 	background: white!important;
 	box-shadow: none!important;
@@ -1710,11 +1721,25 @@ footer.entry-meta {
 .ai1ec-agenda-view .ai1ec-event .ai1ec-event-click {
 	color: @blue!important;
 }
+.ai1ec-agenda-view .ai1ec-event.ai1ec-allday .ai1ec-event-click {
+	background: transparent!important
+}
 
 .thenly blockquote {
 	border: 0;
 	font-size: 15px;
 }
+
+
+.ai1ec-label {
+	display: none;
+}
+.ai1ec-excerpt > div {
+	padding-left: 0;
+}
+
+
+
 
 
 
