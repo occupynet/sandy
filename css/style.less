@@ -1677,117 +1677,11 @@ footer.entry-meta {
 
 /* calendar -- temporary until new plugin theme is done */
 
-.ai1ec-date {
-	background: transparent!important;
-	border-top: 1px solid #BBB!important;
-}
-.ai1ec-event {
-	border: 0!important;
-}
-.ai1ec-event.ai1ec-expanded {
-	border: 1px solid #999!important;
-}
-
-.ai1ec-agenda-view li.ai1ec-date {
-	padding-bottom: 15px!important;
-}
-.ai1ec-agenda-view .ai1ec-event-title {
-	font-size: 15px!important;
-	line-height: 1.5em;
-}
 
 .ai1ec-calendar-toolbar {
 	width: 50%!important;
 	float: right;
 	margin: -24px 0 10px!important;
-}
-
-.thenly .ai1ec-pagination {
-	float: none;
-}
-#ai1ec-prev-page, 
-#ai1ec-next-page {
-	white-space: nowrap;
-	top: 5px;
-	padding: 2px 6px;
-	font-size: 11px!important;
-	line-height: 12px;
-}
-
-
-
-.ai1ec-agenda-view .ai1ec-month {
-	background: #555;
-}
-.ai1ec-agenda-view h3.ai1ec-date-title {
-	border-color: #555;
-}
-
-
-.ai1ec-event-overlay {
-	background: white!important;
-	box-shadow: none!important;
-}
-.ai1ec-event-expand {
-	font-size: 16px!important;
-	font-weight: bold!important;
-	color: white;
-	background: @anchor;
-	padding: 2px 5px!important;
-	text-shadow: none;
-	border-radius: 3px;
-	&:hover {
-		background: @body;
-	}
-}
-.ai1ec-agenda-view .ai1ec-event .ai1ec-event-click {
-	color: @body!important;
-}
-.ai1ec-agenda-view .ai1ec-event.ai1ec-allday .ai1ec-event-click {
-	background: transparent!important
-}
-
-.ai1ec-allday-label {
-	float: left;
-	color: #222!important;
-	font-weight: bold;
-	width: 106px;
-	font-size: 12px!important;
-}
-
-.ai1ec-event-location {
-	color: #AAA;
-	font-size: 12px;
-	margin-left: 10px;
-}
-
-.ai1ec-event-description {
-	padding: 10px 15px 60px!important;
-	.button {
-		font-size: 11px;
-		padding: 5px 12px 6px!important;
-		line-height: 11px;
-	}
-}
-.ai1ec-agenda-view .ai1ec-event-summary .ai1ec-event-click {
-	padding: 10px 15px;
-}
-
-.thenly blockquote {
-	border: 0;
-	font-size: 15px;
-}
-.thenly .btn {
-	background: white;
-	text-shadow: none;
-	white-space: nowrap;
-}
-
-.ai1ec-label {
-	display: none;
-}
-.ai1ec-excerpt > div {
-	padding-left: 0;
 }
 
 .ai1ec-filter-selector {
@@ -1813,6 +1707,120 @@ footer.entry-meta {
 	width: 11px;
 	margin-right: 4px;
 }
+
+
+.thenly blockquote {
+	border: 0;
+	font-size: 15px;
+}
+.thenly .btn {
+	background: white;
+	text-shadow: none;
+	white-space: nowrap;
+}
+
+.thenly .ai1ec-pagination {
+	float: none!important;
+}
+
+#ai1ec-prev-page, 
+#ai1ec-next-page {
+	white-space: nowrap;
+	top: 5px;
+	padding: 2px 6px;
+	font-size: 11px!important;
+	line-height: 12px;
+}
+
+
+.ai1ec-date {
+	background: transparent!important;
+	border-top: 1px solid #BBB!important;
+}
+.ai1ec-event {
+	border: 0!important;
+	&.ai1ec-expanded {
+		border: 1px solid #999!important;
+	}
+}
+
+
+/* calendar agenda view */
+
+.ai1ec-agenda-view {
+	.ai1ec-month {
+		background: #555;
+	}
+	h3.ai1ec-date-title {
+		border-color: #555;
+	}
+	li.ai1ec-date {
+		padding-bottom: 15px!important;
+	}
+	.ai1ec-event-title {
+		font-size: 15px!important;
+		line-height: 1.5em;
+	}
+	.ai1ec-event .ai1ec-event-click {
+		color: @body!important;
+	}
+	.ai1ec-event.ai1ec-allday .ai1ec-event-click {
+		background: transparent!important
+	}
+	.ai1ec-allday-label {
+		float: left;
+		color: #222!important;
+		font-weight: bold;
+		width: 106px;
+		font-size: 12px!important;
+	}
+	.ai1ec-event-summary .ai1ec-event-click {
+		padding: 10px 15px;
+	}
+	.ai1ec-event-location {
+		color: #AAA;
+		font-size: 12px;
+		margin-left: 10px;
+	}
+}
+
+
+.ai1ec-event-description {
+	padding: 10px 15px 60px!important;
+	.button {
+		font-size: 11px;
+		padding: 5px 12px 6px!important;
+		line-height: 11px;
+	}
+}
+
+.ai1ec-label {
+	display: none;
+}
+.ai1ec-excerpt > div {
+	padding-left: 0!important;
+}
+
+.ai1ec-event-overlay {
+	background: white!important;
+	box-shadow: none!important;
+}
+.ai1ec-event-expand {
+	font-size: 16px!important;
+	font-weight: bold!important;
+	color: white;
+	background: @anchor;
+	padding: 2px 5px!important;
+	text-shadow: none;
+	border-radius: 3px;
+	&:hover {
+		background: @body;
+	}
+}
+
+
+
+
 
 
 
