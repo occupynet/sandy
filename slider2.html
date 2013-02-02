@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Slides, A Slideshow Plugin for jQuery</title>
+	
+	<style type="text/css" media="screen">
+		/*
+			Load CSS before JavaScript
+		*/
+		
+		/*
+			Slides container
+			Important:
+			Set the width of your slides container
+			Set to display none, prevents content flash
+		*/
+		.slides_container,
+		.feature_container {
+			/*width:470px;*/
+			width: 100%;
+			display:none;
+		}
+
+		/*
+			Each slide
+			Important:
+			Set the width of your slides
+			If height not specified height will be set by the slide content
+			Set to display block
+		*/
+		.slides_container div,
+		.feature_container div {
+			width:470px;
+			height:170px;
+			display:block;
+		}
+		
+		/*
+			Optional:
+			Reset list default style
+		*/
+		.pagination {
+			list-style:none;
+			margin:0;
+			padding:0;
+		}
+
+		/*
+			Optional:
+			Show the current slide in the pagination
+		*/
+		.pagination .current a {
+			color:red;
+		}
+	</style>
+
+	<link href="http://localhost/wp-content/themes/sandy/css/style.css" media="all" type="text/css" rel="stylesheet"></link>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="js/slides.min.jquery.js"></script>
+
+	<script>
+		$(function(){
+			$('#feature').slides({
+				preload: true,
+				container: 'feature_container',
+				generateNextPrev: false,
+				next: 'feature-next',
+				prev: 'feature-back',
+				currentClass: 'current',
+				play: 5000
+			});
+		});
+	</script>
+
+	<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				generateNextPrev: true
+			});
+		});
+	</script>
+
+
+
+</head>
+<body>
+
+	<div id="feature" class="feature">
+		<h2 class="feature-title">Newswire:</h2>
+		<nav>
+			<button class="feature-next">▸</button>
+			<button class="feature-back">◂</button>
+		</nav>
+		<div style="clear: both"></div>
+		<div class="feature_container">
+			<div class="feature-slide">
+				<h3 class="feature-headline">
+				<p>
+				Over the past three months, we’ve seen people from all over the city and the country come together in response to Sandy. We turned entire churches into “holy warehouses” of donated items and distributed them to dozens of “hubs” all over the …
+				<a href="http://localhost/join-us-for-the-peoples-recovery-summit-free-fri-21-thru-sun-23/">
+				Continue reading
+				<span class="meta-nav">→</span>
+				</a>
+				</p>
+				</h3>
+			</div>
+			<div class="feature-slide">
+				<h3 class="feature-headline">
+				<p>
+				Three months after the storm, New Yorkers continue to rebuild. Volunteers in the occupy sandy network are working tirelessly during these cold months, preparing and serving thousands of hot meals a day, attacking mold, and finding ways to bring warmth wherever …
+				<a href="http://localhost/volunteer-opportunities-as-of-12913/">
+				Continue reading
+				<span class="meta-nav">→</span>
+				</a>
+				</p>
+				</h3>
+			</div>
+		</div>
+	</div>
+
+	<div id="slides">
+		<div class="slides_container">
+			<div>
+				<h1>Slide 1</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div>
+				<h1>Slide 2</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div>
+				<h1>Slide 3</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div>
+				<h1>Slide 4</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
