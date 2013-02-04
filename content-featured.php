@@ -46,7 +46,7 @@
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<div class="feature-slide">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title() ?>" rel="bookmark">
-					<h3 class="feature-headline"><?php the_excerpt(); ?></h3>
+					<h3 class="feature-headline"><?php echo get_interocc_excerpt(25); ?></h3>
 				</a>
 			</div>
 	    <?php endwhile; // end of the loop. ?>
@@ -56,8 +56,8 @@
 
      <?php wp_reset_query(); ?> 
 
+	  <?php the_content(); ?>
 
-  <?php the_content(); ?>
   </div>
   <!-- .entry-content --> 
 </article>

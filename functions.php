@@ -280,6 +280,8 @@ function add_fonts() {
 }
 add_action('wp_head','add_fonts'); 
 
+/*Resources required to display featured posts in a slider on the home page*/
+
 function add_slider_resources() {
 	?>
 
@@ -355,3 +357,68 @@ function add_slider_resources() {
 <?php }
 
 add_action('wp_head','add_slider_resources');
+
+/*Add shortcode for adding the big image buttons on the homepage*/
+/*Usage: [location-button url="http://yourwebsite.org" image="image.jpg"]Text[/location-button]*/
+
+ function location_button($atts, $content = null) {  
+     extract(shortcode_atts(array(  
+         "url" => '',
+         "image" => ''
+     ), $atts));  
+     return '<div class="promo" style="background-image:url(' .$image. '); background-repeat: no-repeat;">
+     <a href="'.$url.'" class="home-location-button"><span>'.$content.' &rsaquo;</span></a>
+     </div>';
+     
+ }  
+    
+     add_shortcode("location-button", "location_button");
+     
+/*Add a filter to allow display of different excerpt lengths
+**Usage: within a template, 
+**Inside the loop -
+**interocc_excerpt(); // regular excerpt (55 words)
+**interocc_excerpt(30); // 30 words with formatting (<p>this is an excerpt ... </p>)
+**get_interocc_excerpt(30); // 30 words without formatting (this is an excerpt ... )
+
+**Outside the loop -
+**pass a Post ID to the function (required outside the loop)
+**interocc_excerpt(30, 22); // 30 word excerpt of Post with ID 22
+**get_interocc_excerpt(30, 22); // 30 word excerpt of Post with ID 22
+*/
+ function interocc_excerpt($excerpt_length = 55, $id = false, $echo = true) {
+          
+     $text = '';
+    
+           if($id) {
+                 $the_post = & get_post( $my_id = $id );
+                 $text = ($the_post->post_excerpt) ? $the_post->post_excerpt : $the_post->post_content;
+           } else {
+                 global $post;
+                 $text = ($post->post_excerpt) ? $post->post_excerpt : get_the_content('');
+     }
+
+                 $text = strip_shortcodes( $text );
+                 $text = apply_filters('the_content', $text);
+                 $text = str_replace(']]>', ']]&gt;', $text);
+	              $text = strip_tags($text);
+                 $excerpt_more = ' <a href="' .get_permalink(). '" class="continue-reading">Continue reading <span class="meta-nav">&rarr;</span>';
+                 //$excerpt_more = ' ' . '[...]';
+                 $words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+                 if ( count($words) > $excerpt_length ) {
+                         array_pop($words);
+                         $text = implode(' ', $words);
+                         $text = $text . $excerpt_more;
+                 } else {
+                         $text = implode(' ', $words);
+                 }
+         if($echo)
+   echo apply_filters('the_content', $text);
+         else
+         return $text;
+ }
+  
+ function get_interocc_excerpt($excerpt_length = 55, $id = false, $echo = false) {
+  return interocc_excerpt($excerpt_length, $id, $echo);
+ }
+
