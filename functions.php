@@ -296,8 +296,7 @@ function add_slider_resources() {
 		*/
 		.slides_container,
 		.feature_container {
-			width:470px;
-			/*width: 100%;*/
+			width:700px;
 			display:none;
 		}
 
@@ -310,8 +309,8 @@ function add_slider_resources() {
 		*/
 		.slides_container div,
 		.feature_container div {
-			width:470px;
-			height:170px;
+			width:700px;
+			height:120px;
 			display:block;
 		}
 		
@@ -323,6 +322,7 @@ function add_slider_resources() {
 			list-style:none;
 			margin:0;
 			padding:0;
+			display: none;
 		}
 
 		/*
@@ -331,10 +331,11 @@ function add_slider_resources() {
 		*/
 		.pagination .current a {
 			color:red;
+			display: none;
 		}
 	</style>
-	
-	<script src="http://localhost/wp-content/themes/sandy/js/slides.min.jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="<?php bloginfo('template_directory');?>/js/slides.min.jquery.js"></script>
 
 	<script>
 		$(function(){
@@ -342,6 +343,7 @@ function add_slider_resources() {
 				preload: true,
 				container: 'feature_container',
 				generateNextPrev: false,
+				pagination: false,
 				next: 'feature-next',
 				prev: 'feature-back',
 				currentClass: 'current',
@@ -352,4 +354,4 @@ function add_slider_resources() {
  
 <?php }
 
-add_action('wp_head','add_slider_resources'); 
+add_action('wp_head','add_slider_resources');

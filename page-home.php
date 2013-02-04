@@ -18,7 +18,7 @@ get_header(); ?>
 				<div class="content-wrap clearfix">
 					<?php the_post(); ?>
 
-					<?php get_template_part( 'content', 'featured2' ); ?>
+					<?php get_template_part( 'content', 'featured' ); ?>
                 </div>
 
 				<?php //comments_template( '', true ); ?>
