@@ -299,6 +299,7 @@ function add_slider_resources() {
 		.slides_container,
 		.feature_container {
 			width:700px;
+			/*width: 100%;*/
 			display:none;
 		}
 
@@ -312,6 +313,7 @@ function add_slider_resources() {
 		.slides_container div,
 		.feature_container div {
 			width:700px;
+			/*width: 100%;*/
 			height:120px;
 			display:block;
 		}
@@ -367,7 +369,7 @@ add_action('wp_head','add_slider_resources');
          "image" => ''
      ), $atts));  
      return '<div class="promo" style="background-image:url(' .$image. '); background-repeat: no-repeat;">
-     <a href="'.$url.'" class="home-location-button"><span>'.$content.' &rsaquo;</span></a>
+     <a href="'.$url.'" class="home-location-button"><span class="home-location">'.$content.' &rsaquo;</span></a>
      </div>';
      
  }  
@@ -418,7 +420,7 @@ add_action('wp_head','add_slider_resources');
          return $text;
  }
   
- function get_interocc_excerpt($excerpt_length = 55, $id = false, $echo = false) {
-  return interocc_excerpt($excerpt_length, $id, $echo);
+	function get_interocc_excerpt($excerpt_length = 55, $id = false, $echo = false) {
+		return interocc_excerpt($excerpt_length, $id, $echo);
  }
 
