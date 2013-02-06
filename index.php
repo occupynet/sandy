@@ -20,8 +20,6 @@ get_header(); ?>
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php if(function_exists('sticky_slider')) echo 'sticky_slider exists';?>
-
 					<?php get_template_part( 'content', 'index' ); ?>
 
 				<?php endwhile; ?>
