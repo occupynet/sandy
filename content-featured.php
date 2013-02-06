@@ -18,7 +18,7 @@
   <!-- .entry-header -->
   
   <div class="entry-content">
-    <p class="follower"> <?php echo get_post_meta($post->ID, 'home-page-blurb', true); ?> </p>
+    <p class="follower"> <?php echo get_post_meta($post->ID, 'custom_tagline', true); ?> </p>
     
     <?php
 	/* Get all sticky posts */
