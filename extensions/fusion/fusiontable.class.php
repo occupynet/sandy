@@ -1,6 +1,7 @@
 <?php
+require_once('occupysandydatasource.class.php');
 
-class FusionTable {
+class FusionTable extends OccupySandyDataSource {
 	private $apikey;
 	private $defaultTable;
 	private $apiQs = 0;
@@ -103,10 +104,46 @@ class FusionTable {
 		"limit" => null,
 		"offset" => null,
 		"table" => null,
-		"where" => null,
+		"matches" => null,
 		"raw" => false,
 		"fresh" => false,
 		));
+
+		// Relocated this from front-end all the way back to the
+		// data source. This limits functionality but nothing was
+		// using it that I know of, and this way I don't have to
+		// write a full-on SQL expression parser for alternative
+		// data sources.
+		$whereClause = '';
+		if (is_array($params['matches'])) :
+			$whereClauses = array();
+			foreach ($params['matches'] as $col => $value) :
+				if (!is_array($value)) :
+					$value = array($value);
+				endif;
+			
+				if (count($value) > 1) :
+					$operator = 'IN';
+					$operand = "(";
+					if (count($value) > 0) :
+						$operand .= "'"
+						 .implode(
+						 	"', '",
+							array_map(function ($v) {
+						return $GLOBALS['wpdb']->escape(trim($v));
+							}, $value))
+						. "'";
+					endif;
+					$operand .= ")";
+				else :
+					$operator = '=';
+					$operand = "'".$wpdb->escape(reset($value))."'";
+				endif;
+			
+				$whereClauses[] = "$col $operator $operand";
+			endforeach;
+			$whereClause = ' WHERE '.implode(' AND ', $whereClauses);
+		endif;             
 
 		$limitClause = '';
 		if (is_numeric($params['limit'])) :
@@ -117,7 +154,6 @@ class FusionTable {
 			$limitClause = ' OFFSET '.$params['offset'].$limitClause;
 		endif;
 
-		$whereClause = '';
 		if (is_string($params['where'])) :
 			$whereClause = ' WHERE '.$params['where'];
 		endif;
@@ -130,21 +166,11 @@ class FusionTable {
 		endif;
 
 		$data = $this->select('SELECT '.$params['cols'].$fromClause.$whereClause.$limitClause, $params);
+
 		if (is_wp_error($data) or $params['raw']) :
 			$ret = $data;
 		else :
-			$ret = array();
-			foreach ($data->rows as $row) :
-				$aRow = array();
-				foreach ($row as $idx => $col) :
-					$i = $idx;
-					if (isset($data->columns[$idx])) :
-						$i = $data->columns[$idx];
-					endif;
-					$aRow[$i] = $col;
-				endforeach;
-				$ret[] = $aRow;
-			endforeach;
+			$ret = $this->to_table_hash($data);
 		endif;
 		return $ret;
 	}
