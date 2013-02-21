@@ -520,7 +520,7 @@ function register_library_post_type () {
 			'hierarchical' => false,
 			'rewrite' => 
 			array(
-				'slug' => 'library-items'
+				'slug' => 'library'
 				),
 			'query_var' => true,
 			'has_archive' => true,
@@ -667,7 +667,7 @@ function get_custom_taxonomy_list ($taxonomyname) {
 		
 		<?php
 		foreach ($custom_terms as $custom_term) {
-		echo '<li><a href="#' . $custom_term->slug . '" title="' . sprintf( __( "View all posts in %s" ), $custom_term->name ) . '" ' . '>' . $custom_term->name.'</a></li>';
+		echo '<li><a href="#' . $custom_term->slug . '" title="' . $custom_term->name . '" ' . '>' . $custom_term->name.'</a></li>';
 		}
 		?>
 	</ul>
