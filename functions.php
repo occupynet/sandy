@@ -657,6 +657,3 @@ function register_project_post_type() {
 
 
 
-
-
-
