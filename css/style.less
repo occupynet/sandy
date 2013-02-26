@@ -874,43 +874,6 @@ hr {
 }
 
 
-#menu-global-menu {
-	padding: 0 10px;
-	margin: 0;
-	background: @black;
-	text-align: right;
-	height: 34px;
-	overflow: hidden;
-	li {
-		margin-left: 0;
-		.caps;
-		font-size: 12px;
-		.inlineBlock;
-		line-height: 34px;
-	}
-	a {
-		color: @grayB;
-		display: block;
-		padding: 0 10px;
-		&:hover {
-			color: @white;
-		}
-	}
-	.globalLogo {
-		float: left;
-		margin-left: 0;
-		.condensed;
-		font-size: 22px;
-		a {
-			 color: @white;
-		 }
-		span {
-			color: @brand;
-		}
-	}
-}
-
-
 #site-title {
 	margin: 0;
 	font-size: 48px;
@@ -1476,13 +1439,46 @@ footer.entry-meta {
 	a {
 		color: @grayC;
 		font-weight: 400;
-		margin-right: 15px;
 		&:hover {
 			color: @white;
 		}
 	}
 }
 
+#menu-global-menu {
+	padding: 0 10px;
+	margin: 0;
+	background: @black;
+	text-align: right;
+	overflow: hidden;
+	li {
+		color:@grayB;
+		margin-left: 0;
+		.caps;
+		font-size: 12px;
+		.inlineBlock;
+		line-height: 34px;
+	}
+	a {
+		color: @grayC;
+		padding: 0 10px;
+		&:hover {
+			color: @white;
+		}
+	}
+	.globalLogo {
+		float: left;
+		margin-left: 0;
+		.condensed;
+		font-size: 22px;
+		a {
+			 color: @white;
+		 }
+		span {
+			color: @brand;
+		}
+	}
+}
 
 
 

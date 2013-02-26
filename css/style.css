@@ -1001,49 +1001,6 @@ hr {
   padding: 7px;
   background: #333;
 }
-#menu-global-menu {
-  padding: 0 10px;
-  margin: 0;
-  background: #000000;
-  text-align: right;
-  height: 34px;
-  overflow: hidden;
-}
-#menu-global-menu li {
-  margin-left: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.2em;
-  font-size: 12px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-  line-height: 34px;
-}
-#menu-global-menu a {
-  color: #555555;
-  display: block;
-  padding: 0 10px;
-}
-#menu-global-menu a:hover {
-  color: #ffffff;
-}
-#menu-global-menu .globalLogo {
-  float: left;
-  margin-left: 0;
-  font-family: "LeagueGothicRegular", "Arial Narrow", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 22px;
-}
-#menu-global-menu .globalLogo a {
-  color: #ffffff;
-}
-#menu-global-menu .globalLogo span {
-  color: #ffcd67;
-}
 #site-title {
   margin: 0;
   font-size: 48px;
@@ -1539,10 +1496,51 @@ footer.entry-meta {
 #site-generator a {
   color: #aaaaaa;
   font-weight: 400;
-  margin-right: 15px;
 }
 #site-generator a:hover {
   color: #ffffff;
+}
+#menu-global-menu {
+  padding: 0 10px;
+  margin: 0;
+  background: #000000;
+  text-align: right;
+  overflow: hidden;
+}
+#menu-global-menu li {
+  color: #555555;
+  margin-left: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  font-size: 12px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  line-height: 34px;
+}
+#menu-global-menu a {
+  color: #aaaaaa;
+  padding: 0 10px;
+}
+#menu-global-menu a:hover {
+  color: #ffffff;
+}
+#menu-global-menu .globalLogo {
+  float: left;
+  margin-left: 0;
+  font-family: "LeagueGothicRegular", "Arial Narrow", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+#menu-global-menu .globalLogo a {
+  color: #ffffff;
+}
+#menu-global-menu .globalLogo span {
+  color: #ffcd67;
 }
 /******* UNIQUE PAGES *******/
 /* home */
