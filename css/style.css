@@ -461,6 +461,9 @@ a:visited:focus {
 a img {
   border: 0;
 }
+aside a {
+  word-wrap: break-word;
+}
 button,
 .button,
 .button:active,
