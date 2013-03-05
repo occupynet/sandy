@@ -285,60 +285,7 @@ add_action('wp_head','add_fonts');
 function add_slider_resources() {
 	?>
 
-	<style type="text/css" media="screen">
-		/*
-			Load CSS before JavaScript
-		*/
-		
-		/*
-			Slides container
-			Important:
-			Set the width of your slides container
-			Set to display none, prevents content flash
-		*/
-		.slides_container,
-		.feature_container {
-			width:700px;
-			/*width: 100%;*/
-			display:none;
-		}
-
-		/*
-			Each slide
-			Important:
-			Set the width of your slides
-			If height not specified height will be set by the slide content
-			Set to display block
-		*/
-		.slides_container div,
-		.feature_container div {
-			width:700px;
-			/*width: 100%;*/
-			height:120px;
-			display:block;
-		}
-		
-		/*
-			Optional:
-			Reset list default style
-		*/
-		.pagination {
-			list-style:none;
-			margin:0;
-			padding:0;
-			display: none;
-		}
-
-		/*
-			Optional:
-			Show the current slide in the pagination
-		*/
-		.pagination .current a {
-			color:red;
-			display: none;
-		}
-	</style>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 	<script src="<?php bloginfo('template_directory');?>/js/slides.min.jquery.js"></script>
 
 	<script>

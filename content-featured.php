@@ -34,24 +34,23 @@
 	query_posts( array( 'post__in' => $sticky, 'caller_get_posts' => 1 ) );
 	?>
 
-    
-	<div class="feature" id="feature">
-		<h2 class="feature-title">Newswire:</h2>
-		<nav>
-			<button class="feature-next">▸</button>
-			<button class="feature-back">◂</button>
-		</nav>
-		<div style="clear: both"></div>
-		<div class="feature_container">
-		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-			<div class="feature-slide">
-				<a href="<?php the_permalink(); ?>" title="<?php the_title() ?>" rel="bookmark">
-					<h3 class="feature-headline"><?php echo get_interocc_excerpt(25); ?></h3>
-				</a>
+    <div style="clear:both;"  class="feature home-feeds" id="feature">
+		<div style="background: #F9F9F9; margin-bottom: 15px; padding: 10px 15px 5px;">
+			<h2 style="font-size: 24px; font-family: LeagueGothicRegular, 'Arial Narrow', Arial, sans-serif; line-height: 36px; margin: 0 0 -.5em; float:left;">Newswire</h2>
+			<nav style="padding: 4px 0;">
+				<button class="feature-next" style="font-size: 36px; background: transparent; color: #222!important; float: right;">▸</button>
+				<button class="feature-back" style="font-size: 36px; background: transparent; color: #222!important;">◂</button>
+				<br>
+			</nav>
+			<div class="feature_container">
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+				<div class="feature-slide">
+					<h3><a href="<?php the_permalink(); ?>" title="<?php the_title() ?>" rel="bookmark"><?php echo get_interocc_excerpt(25); ?></a></h3>
+				</div>
+			<?php endwhile; // end of the loop. ?>
 			</div>
-	    <?php endwhile; // end of the loop. ?>
 		</div>
-    </div>
+	</div>
     <!-- .featured-posts -->
 
      <?php wp_reset_query(); ?> 
