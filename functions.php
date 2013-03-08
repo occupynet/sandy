@@ -377,6 +377,9 @@ add_action('wp_head','add_slider_resources');
 *******************************************
 */
 
+//this should be, if views is activated
+if ( 1 == 2 ){
+
 // Initialize custom post type and taxonomy registration
 add_action( 'init', 'register_resources_post_type' );
 
@@ -601,6 +604,8 @@ function register_project_post_type() {
 			) 
 		);
 }
+
+} // end if views
 
 //List terms in a given taxonomy
 //Used to generate TOC for custom post types like Resources and Library
