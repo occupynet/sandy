@@ -35,11 +35,11 @@
 	?>
 
     <div style="clear:both;"  class="feature home-feeds" id="feature">
-		<div style="background: #F9F9F9; margin-bottom: 15px; padding: 10px 15px 5px;">
-			<h2 style="font-size: 24px; font-family: LeagueGothicRegular, 'Arial Narrow', Arial, sans-serif; line-height: 36px; margin: 0 0 -.5em; float:left;">Newswire</h2>
-			<nav style="padding: 4px 0;">
-				<button class="feature-next" style="font-size: 36px; background: transparent; color: #222!important; float: right;">▸</button>
-				<button class="feature-back" style="font-size: 36px; background: transparent; color: #222!important;">◂</button>
+		<div class="slider">
+			<h2 class="slider-title">Newswire</h2>
+			<nav class="slider-nav">
+				<button class="feature-next slider-next;">▸</button>
+				<button class="feature-back slider-back">◂</button>
 				<br>
 			</nav>
 			<div class="feature_container">
