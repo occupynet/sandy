@@ -35,11 +35,11 @@
 	?>
 
     <div style="clear:both;"  class="feature home-feeds" id="feature">
-		<div class="slider">
-			<h2 class="slider-title">Newswire</h2>
-			<nav class="slider-nav">
-				<button class="feature-next slider-next;">▸</button>
-				<button class="feature-back slider-back">◂</button>
+		<div class="feature-box">
+			<h2 class="feature-title">Newswire</h2>
+			<nav class="feature-nav">
+				<button class="feature-next">▸</button>
+				<button class="feature-back">◂</button>
 				<br>
 			</nav>
 			<div class="feature_container">
