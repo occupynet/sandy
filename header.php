@@ -91,7 +91,7 @@
 					<a href="http://statigr.am/viewer.php#/detail/319004559331671253_25813182" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/carousel/occupysandy8.jpg" alt="occupysandy" width="150" height="150"></a>
 
 					<a href="http://occupysandy.net/wp-content/uploads/2013/03/occupysandy105sq.jpg" target="_blank"><img src="http://occupysandy.net/wp-content/uploads/2013/03/occupysandy105sqsm.jpg" alt="occupysandy" width="150" height="150"></a>
-					<a href="http://statigr.am/viewer.php#/detail/321792944812413008_244169435" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/carousel/occupysandy5.jpg" alt="occupysandy" width="150" height="150"></a>
+					<a href="http://statigr.am/viewer.php#/detail/321866875885911625_7937366" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/carousel/occupysandy13.jpg" alt="occupysandy" width="150" height="150"></a>
 					<a href="http://occupysandy.net/wp-content/uploads/2013/03/occupysandy107sq.jpg" target="_blank"><img src="http://occupysandy.net/wp-content/uploads/2013/03/occupysandy107sqsm.jpg" alt="occupysandy" width="150" height="150"></a>
 
 					<a href="http://statigr.am/viewer.php#/detail/319003987153974191_2484027" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/carousel/occupysandy10.jpg" alt="occupysandy" width="150" height="150"></a>
@@ -101,8 +101,8 @@
 					<a href="http://statigr.am/viewer.php#/detail/321708886318182164_30381338" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/carousel/occupysandy11.jpg" alt="occupysandy" width="150" height="150"></a>
 
 
+					<a href="http://statigr.am/viewer.php#/detail/321792944812413008_244169435" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/carousel/occupysandy5.jpg" alt="occupysandy" width="150" height="150"></a>
 					<a href="http://statigr.am/viewer.php#/detail/319006263469863879_2484027" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/carousel/occupysandy9.jpg" alt="occupysandy" width="150" height="150"></a>
-					<a href="http://statigr.am/viewer.php#/detail/321866875885911625_7937366" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/carousel/occupysandy13.jpg" alt="occupysandy" width="150" height="150"></a>
 					<a href="http://occupysandy.net/wp-content/uploads/2013/03/occupysandy113sq.jpg" target="_blank"><img src="http://occupysandy.net/wp-content/uploads/2013/03/occupysandy113sqsm.jpg" alt="occupysandy" width="150" height="150"></a>
 					<a href="http://occupysandy.net/wp-content/uploads/2013/03/occupysandy115sq.jpg" target="_blank"><img src="http://occupysandy.net/wp-content/uploads/2013/03/occupysandy115sqsm.jpg" alt="occupysandy" width="150" height="150"></a>
 					<a href="http://statigr.am/viewer.php#/detail/321802059520514427_28563429" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/carousel/occupysandy4.jpg" alt="occupysandy" width="150" height="150"></a>
