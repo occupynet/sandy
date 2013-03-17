@@ -26,7 +26,7 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
-<?php if ( of_get_option('layout','layout-2cl') != 'layout-1c') {
+<?php if ( of_get_option('layout','layout-2cr','layout-2cl') != 'layout-1c') {
 	get_sidebar();
 } ?>
 <?php get_footer(); ?>
