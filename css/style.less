@@ -574,6 +574,9 @@ dd {
   margin: 0 25px 25px;
 }
 
+
+
+
 .page .entry-content ul {
   margin: 1em 50px 2em;
 }
@@ -798,7 +801,7 @@ hr {
 #primary {
   width: 100%;
   background: @white;
-  padding: 20px 30px 40px;
+  padding: 32px 30px 40px;
 }
 
 
@@ -823,7 +826,7 @@ hr {
 .layout-2cl {
   #primary {
     width: 75%;
-    float: left;
+    float: right;
   }
 }
 
@@ -1058,7 +1061,8 @@ hr {
   color: @brand;
 }
 
-.home .page-title, .home .entry-title {
+.home .page-title, 
+.home .entry-title {
   display: none;
 }
 
@@ -1070,18 +1074,42 @@ hr {
 .entry-title {
   margin-top: 3px;
   color: @body;
+  a {
+	  color: @body;
+	  &:hover {
+		  color: @anchor;
+	  }
+  }
 }
 
 
-.entry-date, .sep {
-  font-style: italic;
-  color: @grayC;
+.entry-date, 
+.post-date,
+.sep {
+	font-style: italic;
+	color: @grayC;
+	margin: 0 0 12px;
+}
+
+.archive-list .item-title {
+	.condensed;
+	font-size: 28px;
+	line-height: 1.1em;
+	margin-bottom: -3px;
 }
 
 
+.post-summary, 
 .entry-summary {
   margin-bottom: 2em;
   max-width: 700px;
+	a {
+		display: block;
+		font-size: 14px;
+		font-style: italic;
+		font-weight: bold;
+		margin: 6px 0 25px;
+	}	
 }
 
 
