@@ -1484,11 +1484,15 @@ footer.entry-meta {
     margin-left: 5px;
   }
   .about {
-    .column(6);
+    display: inline;
+	float: left;
+	width: 50%;
     padding: 25px;
   }
   .events, .contact, .weather {
-    .column(3);
+    display: inline;
+	float: left;
+	width: 25%;
     padding: 25px 25px 25px 0;    
     dt {
       margin-top: .5em;
@@ -2509,6 +2513,45 @@ input::-moz-focus-inner {
 
 
 /******* RESPONSIVE STYLING *******/
+
+
+@media screen and (max-width: 768px) {
+
+	#menu-local-menu a {
+		padding: 0 15px;
+		border-bottom: 1px solid #BBB;
+	}
+	
+	#menu-item-21706 a, 
+	#menu-item-21707 a {
+		height: 45px;
+	}
+	
+	.home-feeds, 
+	.home-promos {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 30px;
+		float: none;
+	}
+	
+	#interoccupy {
+		.about {
+			width: 100%;
+			margin: 0;
+			padding: 25px 25px 13px;
+			border-bottom: 1px dotted #DDD;
+		}
+		.weather, 
+		.contact {
+			width: 50%;
+			padding: 25px 0 30px 25px;
+			margin: 0;
+		}
+	}
+
+}
+
 
 
 @media screen and (max-width: 720px) {
