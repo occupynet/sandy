@@ -508,10 +508,13 @@ button,
     white-space: nowrap;
   }
   td {
-    padding: 7px 10px 9px;
+    padding: 10px;
     font-size: 14px;
     line-height: 1.3em;
     vertical-align: top;
+    p {
+	    margin: -2px 0 .5em;
+    }
   }
   tr:nth-child(2n+2) {  
     background: #F5F5F5;
@@ -1316,11 +1319,11 @@ footer.entry-meta {
   display: none;
 }
 
-.twtr-widget .twtr-tweet {
+#twtr-widget-1 .twtr-tweet {
   border-bottom: 1px solid #CCC;
   padding: 0!important;
   a {
-    color: #999 !important;
+    color: #222 !important;
     &:hover {
       color: @anchor!important;
     }
