@@ -252,7 +252,7 @@ p {
   margin: .5em 0 .5em;
 }
 
-h1 {font-size: 36px; .condensed;}
+h1 {font-size: 36px; .condensed; line-height: 1.1em;}
 h2 {font-size: 22px; .caps;}
 h3 {font-size: 18px;}
 h4 {font-size: 14px;}
@@ -493,6 +493,15 @@ button,
   }
 }
 
+.search-results article {
+border-top: 1px solid #DDD;
+margin-top: 25px;
+padding-top: 25px;
+}
+
+.comments {
+	
+}
 
 /* table */
 
@@ -1038,19 +1047,14 @@ hr {
 
 /* twitter and facebook icons in local menu */
 
-#menu-item-21706, #menu-item-21707, /* occupysandy.net */
-#menu-item-602, #menu-item-603, /* staging */
-#menu-item-3094, #menu-item-3095, /* production */
-#menu-item-3653, #menu-item-3654 /* pea's local */ {
-  a {
-    .socialgram;
-    font-size: 40px;
-    padding: 0;
-    width: 44px;
-    height: 44px;
-    line-height: 40px;
-    text-align: center;
-  }
+.social-icon a {
+	.socialgram;
+	font-size: 40px;
+	padding: 0;
+	width: 44px;
+	height: 44px;
+	line-height: 40px;
+	text-align: center;
 }
 
 .communities {
@@ -1817,7 +1821,12 @@ footer.entry-meta {
   padding:0;
 }
 
-
+.error404 ul {
+	margin: 1em 2em;
+}
+.error404 li {
+	margin: .5em 0;
+}
 
 /* calendar -- temporary until new plugin theme is done */
 
